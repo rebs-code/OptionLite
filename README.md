@@ -16,3 +16,10 @@ OptionLite is all about learning and laughing. It's a React project that's part 
 ## That's All, Folks!
 
 Remember, OptionLite is just a mockup – a React-flavored sketch of what might be. It's a playground for ideas and a canvas for learning. Dive in, enjoy, and happy coding!
+
+![image](https://github.com/rebs-code/OptionLite/assets/80966551/a792819a-2064-46fd-b42a-4052e3985df6)
+
+
+![image](https://github.com/rebs-code/OptionLite/assets/80966551/13e09cf2-b639-4557-ad97-d036cd4fdad9)
+
+
