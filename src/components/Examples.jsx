@@ -1,4 +1,6 @@
 import TabButton from "./TabButton.jsx";
+import Section from "./Section.jsx";
+import Tabs from "./Tabs.jsx";
 import { useState } from "react";
 import { EXAMPLES } from "../data.js";
 
@@ -24,36 +26,39 @@ export default function Examples() {
   }
 
   return (
-    <section id="examples">
-      <h2>Explore</h2>
-      <menu>
-        <TabButton
-          isSelected={selectedTopic === "optionsContracts"}
-          onSelect={() => handleSelect("optionsContracts")}
-        >
-          Options Contracts
-        </TabButton>
-        {/* arrow function is used to prevent handleSelect to run upon render */}
-        <TabButton
-          isSelected={selectedTopic === "decentralizedTrading"}
-          onSelect={() => handleSelect("decentralizedTrading")}
-        >
-          DEX Trading
-        </TabButton>
-        <TabButton
-          isSelected={selectedTopic === "liquidityPools"}
-          onSelect={() => handleSelect("liquidityPools")}
-        >
-          Liquidity Pools
-        </TabButton>
-        <TabButton
-          isSelected={selectedTopic === "smartContracts"}
-          onSelect={() => handleSelect("smartContracts")}
-        >
-          Smart Contracts
-        </TabButton>
-      </menu>
-      {tabContent}
-    </section>
+    <Section id="examples" title="Explore">
+      <Tabs
+        buttons={
+          <>
+            <TabButton
+              isSelected={selectedTopic === "optionsContracts"}
+              onClick={() => handleSelect("optionsContracts")}
+            >
+              Options Contracts
+            </TabButton>
+            <TabButton
+              isSelected={selectedTopic === "decentralizedTrading"}
+              onClick={() => handleSelect("decentralizedTrading")}
+            >
+              DEX Trading
+            </TabButton>
+            <TabButton
+              isSelected={selectedTopic === "liquidityPools"}
+              onClick={() => handleSelect("liquidityPools")}
+            >
+              Liquidity Pools
+            </TabButton>
+            <TabButton
+              isSelected={selectedTopic === "smartContracts"}
+              onClick={() => handleSelect("smartContracts")}
+            >
+              Smart Contracts
+            </TabButton>
+          </>
+        }
+      >
+        {tabContent}
+      </Tabs>
+    </Section>
   );
 }
